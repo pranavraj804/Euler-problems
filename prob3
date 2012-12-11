@@ -1,0 +1,17 @@
+from math import sqrt
+def isprime(n):
+  if((n % 2 == 0) or (n % 3 == 0) or (n<2)):
+		return 0
+	else:
+		for i in range(4, int(sqrt(n))+1):
+	 		if(n % i == 0):
+	 			return 0
+		return 1
+
+
+no = 600851475143
+root = int(sqrt(no))
+for x in range(root, 1, -1):
+  if((no%x == 0) and isprime(x)):
+		print x
+		break
